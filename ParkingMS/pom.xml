@@ -16,8 +16,8 @@
 	<name>CoffeeMS</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>11</java.version>
-		<spring-cloud.version>2020.0.3</spring-cloud.version>
+    <java.version>1.8</java.version>
+    <spring-cloud.version>2021.0.4</spring-cloud.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -84,8 +84,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
-    <finalName>parkingms</finalName>
-
+    <finalName>parkingservice</finalName>
 	</build>
 
 </project>

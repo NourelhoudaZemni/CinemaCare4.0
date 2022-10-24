@@ -1,4 +1,5 @@
-FROM openjdk:11
-EXPOSE 8083
-ADD /target/parkingms.jar parkingms.jar
-ENTRYPOINT ["java", "-jar", "/parkingms.jar"]
+FROM openjdk:8
+EXPOSE 8040
+VOLUME /tmp
+ADD /target/parkingservice.jar parkingservice.jar
+ENTRYPOINT ["java", "-jar", "/parkingservice.jar"]

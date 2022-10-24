@@ -1,0 +1,7 @@
+tn\esprit\spring\FilmServiceApplication.class
+tn\esprit\spring\services\IFilmService.class
+tn\esprit\spring\repositories\FilmRepository.class
+tn\esprit\spring\entities\CategorieFilm.class
+tn\esprit\spring\services\FilmServices.class
+tn\esprit\spring\entities\Film.class
+tn\esprit\spring\controller\FilmController.class

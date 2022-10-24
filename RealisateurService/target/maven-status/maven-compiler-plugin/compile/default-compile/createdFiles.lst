@@ -1,0 +1,6 @@
+tn\esprit\spring\services\IRealisateurService.class
+tn\esprit\spring\repositories\RealisateurRepository.class
+tn\esprit\spring\RealisateurServiceApplication.class
+tn\esprit\spring\entities\Realisateur.class
+tn\esprit\spring\services\RealisateurService.class
+tn\esprit\spring\controller\RealisateurController.class

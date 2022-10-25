@@ -1,0 +1,64 @@
+<div class="container">
+<div class="row movies mt-5">
+    <div class="col-md-3 col-sm-6" >
+
+
+
+
+    <div class="row" >
+
+
+        <div class="col-md-4  ">
+
+
+            </div>
+        <div class="col-md-8  ">
+          <h1>Liste des films  <a href="/addFilm"><button class="btn btn-primary" style="margin-right: 15px;"> Add film</button></a>
+          </h1>
+
+            <table class="table">
+                <thead>
+                    <tr>
+
+                        <th scope="col">Nom Film</th>
+                        <th scope="col">Description </th>
+                        <th scope="col">Duree</th>
+                        <th scope="col">Acteur</th>
+                        <th scope="col">Categorie</th>
+                        <th scope="col">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+
+                      <tr *ngFor="let li of ListFilm ">
+                        <td >{{li.nomFilm}} </td>
+                        <td>{{li.description }}</td>
+                        <td>{{li.duree}}</td>
+                        <td>{{li.acteurs}}</td>
+                        <td>{{li.categorieFilm}}</td>
+                        <td>
+                          <button class="btn btn-success" style="margin-right: 15px;" (click)="Delete(li.id)" >Delete</button>
+                          </td>
+                      </tr >
+                </tbody>
+              </table>
+
+
+         <!-- <div>
+              <button class="btn btn-success" style="margin-right: 15px;" (click)="SavePDF()" >Download (PDF)</button>
+              <button class="btn btn-danger" style="margin-right: 15px;" (click)="Delete(reclamation.id)"> Delete</button>
+              <button class="btn btn-primary" style="margin-right: 15px;" (click)="Update(reclamation.id)"> Update</button>
+            </div>
+          -->
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+</div>
+</div>

@@ -7,10 +7,14 @@ import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { CentreCinemaComponent } from './centreCinema/centreCinema.component';
+
 import { AddFilmComponent } from './film/add/addFilm.component';
 import { FilmService } from 'src/service/film.service';
 import { RouterLink } from '@angular/router';
 import { GetFilmsComponent } from './film/getfilms/getfilms.component';
+
 
 @NgModule({
   declarations: [

@@ -7,7 +7,11 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 const routes: Routes = [
   {
     path: 'reclamation', loadChildren: () => import('./reclamation/reclamation.module').then(m => m.ReclamationModule)
-   }, {
+   },
+   {
+    path: 'CentreCinema', loadChildren: () => import('./centreCinema/centreCinema.module').then(m => m.CentreCinemaModule)
+   },
+    {
     path: 'auth', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
   },
   {path:"addFilm", component:AddFilmComponent},

@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ReclamationRoutingModule } from './reclamation-routing.module';
-import { ReclamationComponent } from './reclamation.component';
+
 import { AddComponent } from './add/add.component';
 import { UpdateComponent } from './update/update.component';
 import { ShowComponent } from './show/show.component';
@@ -11,11 +10,13 @@ import { GetDetailsComponent } from './get-details/get-details.component';
 import { GetParentComponent } from './get-parent/get-parent.component';
 import { GetChildComponent } from './get-child/get-child.component';
 import { NavBarComponent } from '../nav-bar/nav-bar.component';
+import { CentreCinemaComponent } from './centreCinema.component';
+import { CentreCinemaRoutingModule } from './centreCinema-routing.module';
 
 
 @NgModule({
   declarations: [
-    ReclamationComponent,
+    CentreCinemaComponent,
     UpdateComponent,
     AddComponent,
     ShowComponent,
@@ -27,7 +28,7 @@ import { NavBarComponent } from '../nav-bar/nav-bar.component';
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
-    ReclamationRoutingModule
+    CentreCinemaRoutingModule
   ]
 })
-export class ReclamationModule { }
+export class CentreCinemaModule { }

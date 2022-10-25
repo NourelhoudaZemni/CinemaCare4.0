@@ -1,0 +1,27 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">IdCentreCinema</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Lieu</th>
+        <th scope="col">Telephone</th>
+
+       
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let li of ListCentreCinema let i=index;">
+        <th scope="row">{{li.idCentre}}</th>
+        <td >{{li.nom}}</td>
+        <td>{{li.lieu}}</td>
+        <td>{{li.tel}}</td>
+
+        <td>  <button class="btn btn-primary" (click)="Delete(li.idCentre)"> Delete</button></td>
+        <td>  <button class="btn btn-primary" (click)="Update(li.idCentre)"> Update</button></td>
+        <!-- Ou bien 
+       <td>  <button class="btn btn-primary"[routerLink]="'/Invoice/InvoiceHome/update/'+li.idFacture"> Update</button></td>
+       
+      -->
+      </tr>
+    </tbody>
+  </table>

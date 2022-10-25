@@ -13,15 +13,15 @@ export class AddComponent implements OnInit {
  
   Reclamation!:Reclamation[];
 
-  title !:string;
+  valide !:boolean;
   description!:string;
-  date!:string;
+  date_de_creation!:Date;
 
   ReclamationForm = new FormGroup(
 		{
-			title : new FormControl(''),
+			valide : new FormControl(''),
 			description : new FormControl(''),
-			date : new FormControl(''),
+			date_de_creation : new FormControl(''),
 
 		}
 		)

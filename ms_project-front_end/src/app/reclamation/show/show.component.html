@@ -2,6 +2,7 @@
     <thead>
       <tr>
         <th scope="col">IdReclamation</th>
+        <th scope="col">Validite</th>
         <th scope="col">description</th>
         <th scope="col">date_Reclamation</th>
 
@@ -11,8 +12,9 @@
     <tbody>
       <tr *ngFor="let li of ListReclamation let i=index;">
         <th scope="row">{{li.id}}</th>
+        <td >{{li.valide}}</td>
         <td >{{li.description}}</td>
-        <td>{{li.date}}</td>
+        <td>{{li.date_de_creation}}</td>
 
         <td>  <button class="btn btn-primary" (click)="Delete(li.id)"> Delete</button></td>
         <td>  <button class="btn btn-primary" (click)="Update(li.id)"> Update</button></td>

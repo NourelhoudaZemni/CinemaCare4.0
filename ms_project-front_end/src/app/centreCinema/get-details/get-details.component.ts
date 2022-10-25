@@ -2,8 +2,9 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
-import { Reclamation } from 'src/Models/Reclamation';
-import { ReclamationService } from '../reclamation.service';
+import { CentrecinemaService } from 'src/app/Services/centrecinema.service';
+import { CentreCinema } from 'src/Models/CentreCinema';
+
 
 @Component({
   selector: 'app-get-details',
@@ -13,13 +14,13 @@ import { ReclamationService } from '../reclamation.service';
 export class GetDetailsComponent implements OnInit {
 
   id!:number;
-  reclamation !:Reclamation;
+  CentreCinema !:CentreCinema;
   isLoading = true;
   @ViewChild('content') content!: ElementRef;  
 
 
  
-  constructor(private route:ActivatedRoute, private service:ReclamationService,private router:Router) { }
+  constructor(private route:ActivatedRoute, private service:CentrecinemaService,private router:Router) { }
 
 
 
@@ -31,10 +32,10 @@ export class GetDetailsComponent implements OnInit {
   }
   GetAllIvoice()
   {
-    this.service.fetchReclamationById(this.id).subscribe((res:any)=>{
+    this.service.fetchCentreCinemaById(this.id).subscribe((res:any)=>{
 
-    this.reclamation = res;
-    this.reclamation.id = res.id;
+    this.CentreCinema = res;
+    this.CentreCinema.idCentre = res.id;
 
     this.isLoading = false;
     
@@ -47,9 +48,9 @@ export class GetDetailsComponent implements OnInit {
  
   Delete(id:number)
   {
-    this.service.deleteReclamation(id).subscribe(()=>{},(error)=>{console.log(error)});
-    // this.router.navigateByUrl('/reclamation/ReclamationHome/getParent');
-    this.reload('/reclamation/ReclamationHome/getParent')
+    this.service.deleteCentreCinema(id).subscribe(()=>{},(error)=>{console.log(error)});
+    // this.router.navigateByUrl('/CentreCinema/CentreCinemaHome/getParent');
+    this.reload('/CentreCinema/CentreCinemaHome/getParent')
     
   }
   async reload(url: string): Promise<boolean> {
@@ -59,11 +60,11 @@ export class GetDetailsComponent implements OnInit {
   Update(id:number)
   {
     
-    this.router.navigate(['/reclamation/ReclamationHome/update/',id])
+    this.router.navigate(['/CentreCinema/CentreCinemaHome/update/',id])
   }
  
 
-  
+
   
 }
 

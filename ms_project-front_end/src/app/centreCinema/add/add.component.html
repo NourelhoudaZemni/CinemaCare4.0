@@ -1,0 +1,25 @@
+
+<form [formGroup]="CentreCinemaForm" (ngSubmit)="SaveCentreCinema(CentreCinemaForm.value)" >
+    <div class="mb-3">
+     
+      <label for="" class="form-label">Nom</label>
+      <input formControlName="nom" type="text" class="form-control" id="title">
+      
+      <label for="" class="form-label">Lieu</label>
+      <input formControlName="lieu" type="text" class="form-control" id="description">
+      
+      <label for="" class="form-label">Tel</label>
+      <input formControlName="tel" type="date" class="form-control" id="date">
+      
+      
+
+<!--       
+      <label for="" class="form-label">dateFacture</label>
+      <input formControlName="dateFacture" type="date" class="form-control" id="dateFacture"> -->
+     
+
+
+     </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>

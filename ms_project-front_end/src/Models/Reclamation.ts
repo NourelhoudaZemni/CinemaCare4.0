@@ -1,7 +1,7 @@
 export class Reclamation{
     id!:number
-    title!:String
+    valide!:Boolean
     description !:String;
-    date!:String;
+    date_de_creation!:Date;
     }
-    
+   

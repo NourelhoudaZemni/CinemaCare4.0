@@ -16,26 +16,26 @@
         <div class="col-md-4  ">
            
              <div class="row">
-                <button class="btn btn-primary" style="margin-right: 15px;"  [routerLink]="'/reclamation/ReclamationHome/getParent/'"> Back To Menu</button>
+                <button class="btn btn-primary" style="margin-right: 15px;"  [routerLink]="'/CentreCinema/CentreCinemaHome/getParent/'"> Back To Menu</button>
             </div>
 
             </div>
         <div class="col-md-8  ">
-          <h1>Reclamation numero :{{reclamation.id}} </h1>
+          <h1>centreCinema numero :{{CentreCinema.idCentre}} </h1>
             <table class="table">
                 <thead>
                     <tr>
                         
-                        <th scope="col">Validité</th>
-                        <th scope="col">description </th>
-                        <th scope="col">Date</th>
+                        <th scope="col">Nom </th>
+                        <th scope="col">Lieu </th>
+                        <th scope="col">Tel</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr >
-                        <td >{{reclamation.valide}} </td>
-                        <td>{{reclamation.description }}</td>
-                        <td>{{reclamation.date_de_creation}}</td>
+                        <td >{{CentreCinema.nom}} </td>
+                        <td>{{CentreCinema.lieu }}</td>
+                        <td>{{CentreCinema.tel}}</td>
                       
                         
                       </tr>
@@ -44,9 +44,8 @@
 
 
             <div>
-             
-              <button class="btn btn-danger" style="margin-right: 15px;" (click)="Delete(reclamation.id)"> Delete</button>
-              <button class="btn btn-primary" style="margin-right: 15px;" (click)="Update(reclamation.id)"> Update</button>
+              <button class="btn btn-danger" style="margin-right: 15px;" (click)="Delete(CentreCinema.idCentre)"> Delete</button>
+              <button class="btn btn-primary" style="margin-right: 15px;" (click)="Update(CentreCinema.idCentre)"> Update</button>
             </div>
 
         </div>
